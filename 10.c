@@ -2,12 +2,16 @@
 
 int main() {
     
-    for (int i = 1; i <= 10; i++) {
+    int i = 1;
+    while (i <= 10) {
         printf("\n--- Tabuada do %d ---\n", i);
         
-        for (int j = 1; j <= 10; j++) {
+        int j = 1;
+        while (j <= 10) {
             printf("%d x %d = %d\n", i, j, i * j);
+            j++;
         }
+        i++;
     }
     
     return 0;

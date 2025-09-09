@@ -7,8 +7,10 @@ int main() {
     scanf("%d", &numero);
     
     printf("\n Tabuada do %d \n", numero);
-    for (int i = 1; i <= 10; i++) {
+    int i = 1;
+    while (i <= 10) {
         printf("%d x %d = %d\n", numero, i, numero * i);
+        i++;
     }
     
     return 0;

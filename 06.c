@@ -10,8 +10,10 @@ int main() {
     printf("Qual a raca do Pet? ");
     scanf(" %s", raca_pet);
    
-    for (int i = 1; i <= 15; i++) {
+    int i = 1;
+    while (i <= 15) {
         printf("[%d] O Pet %s eh um(a) %s.\n", i, nome_pet, raca_pet);
+        i++;
     }
     
     return 0;

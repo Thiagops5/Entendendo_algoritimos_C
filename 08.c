@@ -11,18 +11,20 @@ int main() {
     scanf("%d", &fim);
 
     printf("\nValores no intervalo:\n");
-    for (int i = inicio; i <= fim; i++) {
+    int i = inicio;
+    while (i <= fim) {
         printf("%d ", i);
         somatoria += i; 
-        contador++;     
+        contador++;
+        i++;
     }
 
     if (contador > 0) {
         float media = (float)somatoria / contador;
         
-        printf("\n Estatisticas \n");
+        printf("\n\n Estatisticas \n");
         printf("Quantidade de numeros: %d\n", contador);
-        printf("Somatoria dos numeros: %d\n", somatoria);
+        printf("Somatoria dos numeros: %lld\n", somatoria);
         printf("Media dos valores: %.2f\n", media);
     } else {
         printf("\nIntervalo vazio ou invalido.\n");

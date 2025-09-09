@@ -2,18 +2,27 @@
 
 int main() {
     char nome_aluno[100];
-    float t1, t2, t3, t4, t5, prova;
+    float trabalhos[5];
+    float prova;
+    float soma_trabalhos = 0.0f;
+    int i;
 
     printf("Nome do aluno: ");
     scanf("%s", nome_aluno);
 
     printf("Digite as 5 notas dos trabalhos (cada um valendo 20):\n");
-    scanf("%f %f %f %f %f", &t1, &t2, &t3, &t4, &t5);
+
+    i = 0;
+    while (i < 5) {
+        printf("Nota do trabalho %d: ", i + 1);
+        scanf("%f", &trabalhos[i]);
+        soma_trabalhos += trabalhos[i];
+        i++;
+    }
 
     printf("Digite a nota da prova (valendo 100): ");
     scanf("%f", &prova);
 
-    float soma_trabalhos = t1 + t2 + t3 + t4 + t5;
     float media_geral = (soma_trabalhos + prova) / 2.0f;
 
     printf("\n Boletim \n");
